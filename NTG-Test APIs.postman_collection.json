@@ -1,0 +1,92 @@
+{
+	"info": {
+		"_postman_id": "0616e301-719c-4802-8724-fcb928f7cfdf",
+		"name": "NTG-Test APIs",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "21096748"
+	},
+	"item": [
+		{
+			"name": "Create Student with Chosen Courses & Teachers",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"Student\": {\r\n        \"FirstName\": \"Amer\",\r\n        \"LastName\": \"Abd Alrazak\",\r\n        \"MobileNumber\": \"0965123456\"\r\n    },\r\n    \"Coureses\": [\r\n        {\r\n            \"CourseTeacherId\": 1\r\n        },\r\n        {\r\n            \"CourseTeacherId\": 2\r\n        },\r\n        {\r\n            \"CourseTeacherId\": 3\r\n        }\r\n    ]\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://localhost:44345/api/StudentCourese/CreateStudentWithCoursers",
+					"protocol": "https",
+					"host": [
+						"localhost"
+					],
+					"port": "44345",
+					"path": [
+						"api",
+						"StudentCourese",
+						"CreateStudentWithCoursers"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Update Student Info with Chosen Courses & Teachers",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"Student\": {\r\n        \"FirstName\": \"Amer\",\r\n        \"LastName\": \"Abd Alrazak\",\r\n        \"MobileNumber\": \"0965123456\"\r\n    },\r\n    \"Coureses\": [\r\n        {\r\n            \"CourseTeacherId\": 1\r\n        },\r\n        {\r\n            \"CourseTeacherId\": 2\r\n        },\r\n        {\r\n            \"CourseTeacherId\": 3\r\n        }\r\n    ]\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://localhost:44345/api/StudentCourese/UpdateStudentWithCoursers/1",
+					"protocol": "https",
+					"host": [
+						"localhost"
+					],
+					"port": "44345",
+					"path": [
+						"api",
+						"StudentCourese",
+						"UpdateStudentWithCoursers",
+						"1"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get All Students with their Courses",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://localhost:44345/api/StudentCourese/GetStudentsWithCoursers",
+					"protocol": "https",
+					"host": [
+						"localhost"
+					],
+					"port": "44345",
+					"path": [
+						"api",
+						"StudentCourese",
+						"GetStudentsWithCoursers"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
